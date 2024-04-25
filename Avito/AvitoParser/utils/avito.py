@@ -1,6 +1,7 @@
 from Avito.AvitoParser.utils.preprocessing_data import replace_symbol
 from Avito.AvitoParser.utils.tools import DatetimeConverter
 from datetime import date
+import re
 
 
 class Critical:
@@ -70,5 +71,49 @@ class Critical:
         return self.elements
 
 
+class Additional:
+    def __init__(self, soup):
+        self.soup = soup
+        self.elements = []
 
+    def get_image_link(self):
+        try:
+            links_collection = set()
+            content = self.soup.find("div", attrs={"data-marker": "image-frame/image-wrapper"})
+            for tag in content.find_all():
+                if "data-url" in tag.attrs:
+                    links_collection.add(tag["data-url"])
+                if "src" in tag.attrs:
+                    links_collection.add(tag["src"])
+
+            self.elements.append(links_collection)
+
+            return self.elements
+        except Exception as _ex:
+            print(f"Объявдение снято с публикации: {_ex}")
+
+    def get_cadastral_number(self):
+        try:
+            content = self.soup.find("div", attrs={"data-marker": "item-view/item-description"})
+            description = replace_symbol(content.text)
+
+            def check_number(text):
+                pattern = r'\b\d{2}:\d{2}:\d{7}:\d{1,3}\b'
+                match = re.search(pattern, text)
+                if match:
+                    return match.group()
+                else:
+                    return "Не указан"
+
+            cadastral_number = check_number(text=description)
+            self.elements.append(cadastral_number)
+            return description
+        except Exception as _ex:
+            print(f"Не указан кадастровый номер: {_ex}")
+
+    def parse_html(self):
+        self.get_cadastral_number()
+        self.get_image_link()
+
+        return self.elements
 

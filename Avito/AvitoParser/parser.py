@@ -12,11 +12,13 @@ from Avito.AvitoParser.config import AVITO_URL
 import time
 import os
 # critical info of ads:
-from Avito.AvitoParser.utils.avito import Critical
+from Avito.AvitoParser.utils.avito import Critical, Additional
 # drop None values in data-ads:
 from Avito.AvitoParser.utils.preprocessing_data import drop_none
 # 2D array --> csv file:
 from Avito.AvitoParser.utils.preprocessing_data import save_to_csv
+# fake proxy:
+from Proxies.proxy import Proxy
 
 
 class HTMLLoader:
@@ -31,7 +33,7 @@ class HTMLLoader:
         self.options.add_argument(f"user-agent={self.user_agent}")
         # Chrome web-driver:
         self.driver = webdriver.Chrome(service=Service(ChromeDriverManager(driver_version=driver_version).install()),
-                                       options=self.options)
+                                       options=self.options, seleniumwire_options=Proxy().get_proxy())
         # init current links array:
         self.current_links = []
         # pages number:
@@ -95,17 +97,23 @@ class AvitoParser:
             for filename in os.listdir(directory):
                 with open(os.path.join(directory, filename), "r", encoding="utf-8") as file:
                     soup = BeautifulSoup(file, "html.parser")
+                    # critical characterize:
                     critical = Critical(soup=soup)
                     ads = critical.parse_html(iterator=iterator)
                     iterator += 1
+                    # additional characterize:
+                    additional = Additional(soup=soup)
+                    ads_additional = additional.parse_html()
                     print(50 * "=" + "ADS SAVED" + 50 * "=")
+                    print(54 * "=" + str(iterator) + 54 * "=")
 
-                self.data.append(ads)
+                self.data.append([*ads, *ads_additional])
 
             self.data = drop_none(data=self.data)
 
+            csv_path = r"C:\Users\andre\TyuiuProjectParser\TurboTyuiuParser\Avito\Data\ads.csv"
             save_to_csv(data=self.data,
-                        file_path=r"C:\Users\andre\TyuiuProjectParser\TurboTyuiuParser\Avito\Data\ads.csv")
+                        file_path=csv_path)
 
             return self.data
 
@@ -113,4 +121,3 @@ class AvitoParser:
 parser = AvitoParser()
 data = parser.get_parse()
 print(data)
-

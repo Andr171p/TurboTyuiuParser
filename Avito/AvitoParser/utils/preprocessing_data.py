@@ -18,7 +18,7 @@ def drop_none(data):
 
 
 def save_to_csv(data, file_path):
-    with open(file_path, "w", encoding="utf-8") as csv_file:
+    with open(file_path, "w", encoding="windows-1251") as csv_file:
         csv_writer = csv.writer(csv_file, delimiter=",")
         for i in data:
             csv_writer.writerow(i)
