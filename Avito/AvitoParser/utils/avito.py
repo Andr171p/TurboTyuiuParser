@@ -85,15 +85,15 @@ class Additional:
 
     def get_image_link(self):
         try:
-            links_collection = set()
+            # links_collection = set()
             content = self.soup.find("div", attrs={"data-marker": "image-frame/image-wrapper"})
             for tag in content.find_all():
-                if "data-url" in tag.attrs:
-                    links_collection.add(tag["data-url"])
+                # if "data-url" in tag.attrs:
+                    # links_collection.add(tag["data-url"])
                 if "src" in tag.attrs:
-                    links_collection.add(tag["src"])
+                    self.elements.append(tag["src"])
 
-            self.elements.append(links_collection)
+            # self.elements.append(links_collection)
 
             return self.elements
         except Exception as _ex:

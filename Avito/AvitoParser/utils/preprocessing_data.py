@@ -23,3 +23,12 @@ def save_to_csv(data, file_path):
         for i in data:
             csv_writer.writerow(i)
 
+
+def csv_to_array(file_path):
+    array = []
+    with open(file_path, 'r') as file:
+        csv_reader = csv.reader(file)
+        for row in csv_reader:
+            array.append(row)
+    return array
+
