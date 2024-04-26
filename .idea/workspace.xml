@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f0bbb48-cb71-48c1-a40e-39715571aafd" name="Changes" comment="turbo Tyuiu parser">
-      <change afterPath="$PROJECT_DIR$/Cian/CianParser/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cian/CianParser/parser.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataBase/PostgreSQL/db_auth_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataBase/PostgreSQL/db_connect.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontEnd/menu.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Proxies/auth_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Proxies/proxy.py" afterDir="false" />
+    <list default="true" id="7f0bbb48-cb71-48c1-a40e-39715571aafd" name="Changes" comment="new parser">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Avito/AvitoParser/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/Avito/AvitoParser/parser.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Avito/AvitoParser/utils/avito.py" beforeDir="false" afterPath="$PROJECT_DIR$/Avito/AvitoParser/utils/avito.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Avito/AvitoParser/utils/preprocessing_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/Avito/AvitoParser/utils/preprocessing_data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Avito/Data/ads.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Avito/Data/ads.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,19 +33,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.avito.executor": "Run",
-    "Python.config.executor": "Run",
-    "Python.parser (1).executor": "Run",
-    "Python.parser.executor": "Run",
-    "Python.tools.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PythonContentEntriesConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.avito.executor&quot;: &quot;Run&quot;,
+    &quot;Python.config.executor&quot;: &quot;Run&quot;,
+    &quot;Python.parser (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.parser.executor&quot;: &quot;Run&quot;,
+    &quot;Python.tools.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PythonContentEntriesConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.parser">
     <configuration name="avito" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="TurboTyuiuParser" />
@@ -208,11 +199,36 @@
       <option name="project" value="LOCAL" />
       <updated>1713600677916</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="turbo Tyuiu parser">
+      <option name="closed" value="true" />
+      <created>1714064709305</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1714064709305</updated>
+    </task>
+    <task id="LOCAL-00004" summary="turbo Tyuiu parser">
+      <option name="closed" value="true" />
+      <created>1714064729177</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1714064729177</updated>
+    </task>
+    <task id="LOCAL-00005" summary="new parser">
+      <option name="closed" value="true" />
+      <created>1714127515608</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1714127515608</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="turbo Tyuiu parser" />
-    <option name="LAST_COMMIT_MESSAGE" value="turbo Tyuiu parser" />
+    <MESSAGE value="new parser" />
+    <option name="LAST_COMMIT_MESSAGE" value="new parser" />
   </component>
 </project>

@@ -60,6 +60,8 @@ class Critical:
 
         self.elements.append(array[iterator])
 
+        self.elements.append(iterator)
+
         if "avito" in array[iterator]:
             self.elements.append("avito")
         else:
