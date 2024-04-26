@@ -1,13 +1,10 @@
 import psycopg2
 from DataBase.PostgreSQL.db_auth_data import host, user, password, db_name, port
 from Avito.AvitoParser.utils.preprocessing_data import csv_to_array
+from Avito.AvitoParser.parser import AvitoParser
 
 
-def db_connect(file_path):
-    data_parser = csv_to_array(
-        file_path=file_path
-    )
-    data_parser = list(filter(any, data_parser))
+def db_connect(data_parser):
 
     connection = psycopg2.connect(
         dbname=db_name,
@@ -18,7 +15,7 @@ def db_connect(file_path):
     )
     try:
         with connection.cursor() as cursor:
-            sql = "INSERT INTO komerc (information, price, area, address, datas, url, id_, category_id, photo) VALUES (%s, %s, %s, %s, %s, %s)"
+            sql = "INSERT INTO komerc (information, price, area, address, datas, url, id_, category_id, cadastral_number, photo) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
             for row in data_parser:
                 cursor.execute(sql, row)
     except Exception as _ex:
@@ -30,6 +27,6 @@ def db_connect(file_path):
             print("[INFO] PostgresSQL connection closed")
 
 
-db_connect(
-    file_path=r"C:\Users\andre\TyuiuProjectParser\TurboTyuiuParser\Avito\Data\ads.csv"
-)
+parser = AvitoParser()
+data = parser.get_parse()
+db_connect(data_parser=data)

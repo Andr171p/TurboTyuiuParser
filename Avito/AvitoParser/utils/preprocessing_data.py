@@ -32,3 +32,17 @@ def csv_to_array(file_path):
             array.append(row)
     return array
 
+
+def remove_duplicates_from_column(data, index):
+    column = [row[index] for row in data]
+    unique_column = list(set(column))
+    unique_data = []
+
+    for row in data:
+        if row[index] in unique_column:
+            unique_data.append(row)
+            unique_column.remove(row[index])
+
+    return unique_data
+
+

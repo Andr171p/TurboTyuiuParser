@@ -91,7 +91,7 @@ class Additional:
                 # if "data-url" in tag.attrs:
                     # links_collection.add(tag["data-url"])
                 if "src" in tag.attrs:
-                    self.elements.append(tag["src"])
+                    self.elements.append(str(tag["src"]))
 
             # self.elements.append(links_collection)
 

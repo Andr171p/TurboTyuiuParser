@@ -19,6 +19,8 @@ from Avito.AvitoParser.utils.preprocessing_data import drop_none
 from Avito.AvitoParser.utils.preprocessing_data import save_to_csv
 # fake proxy:
 from Proxies.proxy import Proxy
+# remove doubles urls in ads:
+from Avito.AvitoParser.utils.preprocessing_data import remove_duplicates_from_column
 
 
 class HTMLLoader:
@@ -115,10 +117,9 @@ class AvitoParser:
             save_to_csv(data=self.data,
                         file_path=csv_path)
 
+            self.data = remove_duplicates_from_column(data=self.data,
+                                                      index=5)
+
             return self.data
 
-
-parser = AvitoParser()
-data = parser.get_parse()
-print(data)
 

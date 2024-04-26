@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f0bbb48-cb71-48c1-a40e-39715571aafd" name="Changes" comment="new parser">
+    <list default="true" id="7f0bbb48-cb71-48c1-a40e-39715571aafd" name="Changes" comment="new parser++">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Avito/AvitoParser/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/Avito/AvitoParser/parser.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Avito/AvitoParser/utils/avito.py" beforeDir="false" afterPath="$PROJECT_DIR$/Avito/AvitoParser/utils/avito.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Avito/Data/ads.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Avito/Data/ads.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Avito/AvitoParser/utils/preprocessing_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/Avito/AvitoParser/utils/preprocessing_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataBase/PostgreSQL/db_connect.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataBase/PostgreSQL/db_connect.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,20 +35,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.avito.executor&quot;: &quot;Run&quot;,
-    &quot;Python.config.executor&quot;: &quot;Run&quot;,
-    &quot;Python.parser (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.parser.executor&quot;: &quot;Run&quot;,
-    &quot;Python.tools.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PythonContentEntriesConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.avito.executor": "Run",
+    "Python.config.executor": "Run",
+    "Python.db_connect.executor": "Run",
+    "Python.parser (1).executor": "Run",
+    "Python.parser.executor": "Run",
+    "Python.preprocessing_data.executor": "Run",
+    "Python.tools.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PythonContentEntriesConfigurable"
   }
-}</component>
-  <component name="RunManager" selected="Python.parser">
+}]]></component>
+  <component name="RunManager" selected="Python.db_connect">
     <configuration name="avito" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="TurboTyuiuParser" />
       <option name="ENV_FILES" value="" />
@@ -69,7 +73,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="config" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="db_connect" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="TurboTyuiuParser" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -78,11 +82,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Avito/AvitoParser" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DataBase/PostgreSQL" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Avito/AvitoParser/config.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DataBase/PostgreSQL/db_connect.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -135,7 +139,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="tools" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="preprocessing_data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="TurboTyuiuParser" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -148,7 +152,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Avito/AvitoParser/utils/tools.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Avito/AvitoParser/utils/preprocessing_data.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -159,11 +163,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.db_connect" />
+        <item itemvalue="Python.preprocessing_data" />
         <item itemvalue="Python.parser" />
         <item itemvalue="Python.parser (1)" />
         <item itemvalue="Python.avito" />
-        <item itemvalue="Python.tools" />
-        <item itemvalue="Python.config" />
       </list>
     </recent_temporary>
   </component>
@@ -223,12 +227,30 @@
       <option name="project" value="LOCAL" />
       <updated>1714127515608</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="new parser+">
+      <option name="closed" value="true" />
+      <created>1714144567116</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1714144567116</updated>
+    </task>
+    <task id="LOCAL-00007" summary="new parser++">
+      <option name="closed" value="true" />
+      <created>1714146243118</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1714146243118</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="turbo Tyuiu parser" />
     <MESSAGE value="new parser" />
-    <option name="LAST_COMMIT_MESSAGE" value="new parser" />
+    <MESSAGE value="new parser+" />
+    <MESSAGE value="new parser++" />
+    <option name="LAST_COMMIT_MESSAGE" value="new parser++" />
   </component>
 </project>
