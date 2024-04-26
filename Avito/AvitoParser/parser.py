@@ -121,3 +121,4 @@ class AvitoParser:
 parser = AvitoParser()
 data = parser.get_parse()
 print(data)
+

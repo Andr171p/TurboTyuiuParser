@@ -60,6 +60,11 @@ class Critical:
 
         self.elements.append(array[iterator])
 
+        if "avito" in array[iterator]:
+            self.elements.append("avito")
+        else:
+            self.elements.append("cian")
+
     def parse_html(self, iterator):
         self.get_info()
         self.get_price()
